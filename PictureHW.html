@@ -1,29 +1,34 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <script
-src= "https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js">
-    </script>
-  </head>
-  <body>
-      <div>
-    <input id="inputBox"/>
-    <input id="caption" type="text"/>
-<button id="loadImage">Show Photo With Caption</button>
-<br/>
-<img id="image" src="" alt="No image loaded"/>
-      </div>
-      <script type="text/javascript">
-       $("#loadImage").on('click', function(){
-        let caption = $("input#caption").val();
-    $("#image").attr("src", $("#inputBox").val());
-    //document.write(caption);
+ <head>
+   <script
+     src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js">
+     </script>
+</head>
+<body>
 
-});
-      </script>
-    </body>
-  </html>
 
-<style>
+<h6 id="UR">url</h1>
+<input id = "picURL" class="delete" type = "text">
+<h6 id="caption">type the cation:</h1>
+<input id = "cap" class="delete"  type = "text">
 
-</style>
+   <button>Display Image with caption</button>
+
+   <p></p>
+</body>
+<script>
+
+ $("button").click(()=>{
+   const response = $("input#picURL").val();
+   const caption = $("input#cap").val();
+   $("p").append("<img src = '"+ response + "'></img><br>"+ caption)
+
+
+
+   //do something
+
+ })
+
+</script>
+</html>
